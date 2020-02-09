@@ -1,0 +1,136 @@
+    {% extends "base.html" %}
+
+    {% block main %}
+    <style>
+        
+        .profile_container {
+            width: 50%;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid #cdcdcd;
+            border-radius: 10px;
+
+        }
+
+        .profile_container .pic {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 10px;
+
+        }
+
+        .profile_header {
+            color: white !important;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 32%, rgba(0,212,255,1) 100%); 
+            padding-top: 40px;
+            padding-bottom: 30px;
+        }
+
+        .profile_header h2 {
+            margin-top: 5px;
+        }
+
+        .profile_header h5{
+            margin-bottom: 2px;
+        }
+
+        .profile_container .pic img {
+            object-fit: cover;
+        }
+
+
+        img {
+            max-width: 100%;
+        }
+
+        .profile_body {
+            padding: 30px 36px;
+        }
+
+    </style>
+
+        <div class="profile_container">
+
+           <div class="profile_header">
+
+                <div class="pic">
+                    <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="my image">
+                </div>
+                <div class="content">
+                    <center>
+                    <h2><b>Jeria Levy</b></h2> 
+                    <h5>@JeriaeLevy</h5>
+                    <h5>
+                        Kingston, Jamaica
+                    </h5>
+                    <h5>
+                        Joined {{ format_date_joined }}
+                    </h5>
+                    </center>
+                </div>
+
+            </div>
+
+            <div class="profile_body">
+
+            <p style="text-align: justify;">
+                I am smart and talented young man who loves website design and development. Contact me if you'd like to work togather on a new project. 
+
+            </p>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3 class="text-center">
+                        <b>
+                            7
+                        </b>
+                        <br>
+                        <small>
+                            Posts
+                        </small>
+                    </h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="text-center">
+                        <b>
+                            100
+                        </b>
+                        <br>
+                        <small>
+                            Following
+                        </small>
+                    </h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="text-center">
+                        <b>
+                            250
+                        </b>
+                        <br>
+                        <small>
+                            Followers
+                        </small>
+                    </h3>
+                </div>
+            </div>
+
+            <br>
+
+            <center>
+                <button style="border-radius: 6px; padding: 10px 30px; font-size: 20px;" class="btn btn-primary text-center">Follow</button>
+            </center>
+            </div>
+            
+
+
+            <br>
+
+
+        </div>
+    
+    {% endblock %}
